@@ -36,19 +36,19 @@ public class HomeAdapter extends RecyclerView.Adapter<HomeAdapter.HomeHolder> {
 
     @Override
     public void onBindViewHolder(@NonNull HomeHolder holder, int position) {
-         holder.txtSignal.setText(list.get(position));
+         holder.txtBUYSEll.setText(list.get(position));
          if(list.get(position).equals("BUY")){
              holder.txtSignal.setBackgroundColor(Color.parseColor("#0CC513"));
-             holder.txtPrice.setBackgroundColor(Color.parseColor("#0CC513"));
-             holder.txtExit.setBackgroundColor(Color.parseColor("#0CC513"));
+             holder.txtCmp.setBackgroundColor(Color.parseColor("#0CC513"));
              holder.line.setBackgroundColor(Color.parseColor("#0CC513"));
+             holder.txtNoticed.setBackgroundColor(Color.parseColor("#0CC513"));
              holder.txtStopLoss.setBackgroundColor(Color.parseColor("#BC1F14"));
              holder.txtTarget.setBackgroundColor(Color.parseColor("#BC1F14"));
          }else {
              holder.txtSignal.setBackgroundColor(Color.parseColor("#BC1F14"));
-             holder.txtPrice.setBackgroundColor(Color.parseColor("#BC1F14"));
-             holder.txtExit.setBackgroundColor(Color.parseColor("#BC1F14"));
+             holder.txtCmp.setBackgroundColor(Color.parseColor("#BC1F14"));
              holder.line.setBackgroundColor(Color.parseColor("#BC1F14"));
+             holder.txtNoticed.setBackgroundColor(Color.parseColor("#BC1F14"));
              holder.txtStopLoss.setBackgroundColor(Color.parseColor("#0CC513"));
              holder.txtTarget.setBackgroundColor(Color.parseColor("#0CC513"));
          }
@@ -61,17 +61,19 @@ public class HomeAdapter extends RecyclerView.Adapter<HomeAdapter.HomeHolder> {
 
     public  class HomeHolder extends RecyclerView.ViewHolder{
 
-        TextView txtSignal,txtPrice,txtStopLoss,txtTarget,txtProfitLoss,txtExit;
+        TextView txtBUYSEll,txtSignal,txtCmp,txtStopLoss,txtTarget,txtInstruct,txtResult,txtNoticed;
         View line;
         public HomeHolder(@NonNull View itemView) {
             super(itemView);
+            txtBUYSEll = itemView.findViewById(R.id.txtBUYSEll);
             txtSignal = itemView.findViewById(R.id.txtSignal);
-            txtPrice = itemView.findViewById(R.id.txtPrice);
+            txtCmp = itemView.findViewById(R.id.txtCmp);
             txtStopLoss = itemView.findViewById(R.id.txtStopLoss);
             txtTarget = itemView.findViewById(R.id.txtTarget);
-            txtProfitLoss = itemView.findViewById(R.id.txtProfitLoss);
-            txtExit = itemView.findViewById(R.id.txtExit);
+            txtInstruct = itemView.findViewById(R.id.txtInstruct);
+            txtResult = itemView.findViewById(R.id.txtResult);
             line = itemView.findViewById(R.id.line);
+            txtNoticed = itemView.findViewById(R.id.txtNoticed);
         }
     }
 }
