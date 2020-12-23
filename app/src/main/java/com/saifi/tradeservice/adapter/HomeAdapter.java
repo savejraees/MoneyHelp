@@ -41,14 +41,12 @@ public class HomeAdapter extends RecyclerView.Adapter<HomeAdapter.HomeHolder> {
              holder.txtSignal.setBackgroundColor(Color.parseColor("#0CC513"));
              holder.txtCmp.setBackgroundColor(Color.parseColor("#0CC513"));
              holder.line.setBackgroundColor(Color.parseColor("#0CC513"));
-             holder.txtNoticed.setBackgroundColor(Color.parseColor("#0CC513"));
              holder.txtStopLoss.setBackgroundColor(Color.parseColor("#BC1F14"));
              holder.txtTarget.setBackgroundColor(Color.parseColor("#BC1F14"));
          }else {
              holder.txtSignal.setBackgroundColor(Color.parseColor("#BC1F14"));
              holder.txtCmp.setBackgroundColor(Color.parseColor("#BC1F14"));
              holder.line.setBackgroundColor(Color.parseColor("#BC1F14"));
-             holder.txtNoticed.setBackgroundColor(Color.parseColor("#BC1F14"));
              holder.txtStopLoss.setBackgroundColor(Color.parseColor("#0CC513"));
              holder.txtTarget.setBackgroundColor(Color.parseColor("#0CC513"));
          }
@@ -61,7 +59,7 @@ public class HomeAdapter extends RecyclerView.Adapter<HomeAdapter.HomeHolder> {
 
     public  class HomeHolder extends RecyclerView.ViewHolder{
 
-        TextView txtBUYSEll,txtSignal,txtCmp,txtStopLoss,txtTarget,txtInstruct,txtResult,txtNoticed;
+        TextView txtBUYSEll,txtSignal,txtCmp,txtStopLoss,txtTarget,txtInstruct,txtResult;
         View line;
         public HomeHolder(@NonNull View itemView) {
             super(itemView);
@@ -73,7 +71,6 @@ public class HomeAdapter extends RecyclerView.Adapter<HomeAdapter.HomeHolder> {
             txtInstruct = itemView.findViewById(R.id.txtInstruct);
             txtResult = itemView.findViewById(R.id.txtResult);
             line = itemView.findViewById(R.id.line);
-            txtNoticed = itemView.findViewById(R.id.txtNoticed);
         }
     }
 }
